@@ -1,0 +1,141 @@
+/* Reset margin & padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  color: #333;
+  padding-top: 60px; /* space for fixed navbar */
+  min-height: 100vh;
+}
+
+/* Navbar fixed dan background warna */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #00796b, #004d40);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .navbar-brand {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.navbar .navbar-nav {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .nav-link {
+  color: #c8e6c9;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #a5d6a7;
+}
+
+/* Judul galeri */
+h2 {
+  text-align: center;
+  margin: 1.5rem 0 1rem;
+  color: #004d40;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* Container galeri grid 4 kolom */
+.container-gallery {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Kartu */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+/* Gambar kartu ukuran sama */
+.card-img-top {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Body kartu */
+.card-body {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Judul kartu */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #00796b;
+}
+
+/* Deskripsi */
+.card-text {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Audio full lebar */
+audio {
+  width: 100%;
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(90deg, #00796b, #004d40);
+  color: #c8e6c9;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 600;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.25);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}

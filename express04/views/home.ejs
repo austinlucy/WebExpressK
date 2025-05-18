@@ -1,0 +1,52 @@
+<%- include('partials/header') %>
+
+<section class="home-hero text-center text-white mb-5" style="background: #0d6efd; padding: 60px 0;">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Selamat Datang di Galeri Edukasi Anak TK</h1>
+    <p class="lead">Pilih kategori di menu atas untuk melihat galeri berisi gambar, deskripsi, dan suara edukatif.</p>
+    <% if (user) { %>
+      <div class="alert alert-success mt-4">
+        Halo, <strong><%= user.username %></strong>! Kamu sudah login sebagai 
+        <% if (user.role === 'admin') { %> admin. <% } else { %> user. <% } %>
+      </div>
+    <% } else { %>
+      <a href="/login" class="btn btn-light mt-4 me-2">Login Admin</a>
+      <a href="/user-login" class="btn btn-light mt-4">Login User</a>
+    <% } %>
+  </div>
+</section>
+
+<div class="container mb-5">
+  <h2 class="mb-4 text-center">Galeri Pilihan</h2>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="/img/anjing.jpg" class="card-img-top" alt="anjing" />
+        <div class="card-body">
+          <h5 class="card-title">AsuKayang</h5>
+          <p class="card-text">Gambar anjing yang lucu dan menggemaskan untuk belajar hewan peliharaan.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="/img/apel.jpg" class="card-img-top" alt="Apel" />
+        <div class="card-body">
+          <h5 class="card-title">apel</h5>
+          <p class="card-text">Buah apel segar, sumber vitamin yang baik untuk kesehatan anak.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <img src="/img/mobil.jpg" class="card-img-top" alt="Mobil" />
+        <div class="card-body">
+          <h5 class="card-title">Nissan GTR</h5>
+          <p class="card-text">Contoh kendaraan yang sering kita jumpai di jalan raya.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
