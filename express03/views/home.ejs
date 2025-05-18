@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>Nama Produk</th>
+      <th>Kategori</th>
+      <th>Harga</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% products.forEach(product => { %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.category %></td>
+        <td>Rp <%= product.price %></td>
+      </tr>
+    <% }); %>
+  </tbody>
+</table>
+
+<%- include('partials/footer') %>
